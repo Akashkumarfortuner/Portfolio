@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Kumar | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .skill-logo {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s;
+        }
+        .skill-logo:hover {
+            transform: scale(1.2);
+        }
+        .skills-container {
+            position: relative;
+            width: 300px;
+            height: 450px;
+            margin: 40px auto;
+        }
+        
+        .center-logo {
+            left: 50%;
+            top: 50%;
+            width: 60px;
+            height: 60px;
+        }
+        .skill-1 { left: 50%; top: 10%; }
+        .skill-2 { left: 85%; top: 25%; }
+        .skill-3 { left: 90%; top: 55%; }
+        .skill-4 { left: 75%; top: 85%; }
+        .skill-5 { left: 50%; top: 90%; }
+        .skill-6 { left: 25%; top: 85%; }
+        .skill-7 { left: 10%; top: 55%; }
+        .skill-8 { left: 15%; top: 25%; }
+        .skill-9  { left: 65%; top: 20%; }
+        .skill-10 { left: 85%; top: 70%; }
+        .skill-11 { left: 35%; top: 20%; }
+        .skill-12 { left: 15%; top: 70%; }
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const revealSections = () => {
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < window.innerHeight * 0.85) {
+                        section.classList.add("show");
+                    }
+                });
+            };
+            window.addEventListener("scroll", revealSections);
+            revealSections();
+        });
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <header class="text-center py-8">
+        <img src="profile.png" alt="Akash Kumar" class="w-40 h-40 rounded-full mx-auto shadow-lg hover-effect">
+        <h1 class="text-3xl font-bold mt-4">Akash Kumar</h1>
+        <p class="text-lg text-gray-400">AI & ML Engineer | Software Developer</p>
+        <section id="intro" class="text-center py-10">
+            <h2 class="text-2xl font-semibold">About Me</h2>
+            <p class="text-gray-400 mt-4 max-w-2xl mx-auto text-justify">
+                I'm Akash Kumar, an aspiring AI & ML Engineer and Software Developer passionate about leveraging 
+                artificial intelligence to solve real-world problems. With expertise in Machine Learning, Deep Learning, 
+                and Software Development, I specialize in building intelligent systems, predictive models, and innovative applications. 
+                I am always eager to learn, experiment, and create impactful solutions.
+            </p>
+        </section>
+        
+        <nav class="mt-6">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
+                <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+                <li><a href="#resume" class="hover:text-blue-400">Resume</a></li>
+                <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="skills" class="text-center py-10">
+        <h2 class="text-2xl font-semibold">Tech Stack</h2>
+        <div class="mt-6 skills-container">
+            <img src="https://img.icons8.com/?size=512&id=hZvpN3zV45Yf&format=png" alt="Python" class="skill-logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/051/336/371/non_2x/c-programming-transparent-logo-free-png.png" alt="C" class="skill-logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript" class="skill-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png" alt="TensorFlow" class="skill-logo">
+            <img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-linuxhq/events/PyTorch_Symbol_01_OrangeOnTransparent_nUWxXkQ.png" alt="PyTorch" class="skill-logo">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/049/116/750/small/blender-transparent-background-icon-free-png.png" alt="OpenCV" class="skill-logo">
+            <img src="https://i.pinimg.com/originals/51/45/df/5145df1033fa60f13b3b7125d2b69554.jpg" alt="Flask" class="skill-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" alt="Django" class="skill-logo">
+            <img src="https://brandeps.com/logo-download/F/Firebase-logo-02.png" alt="Node.js" class="skill-logo">
+            <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="React.js" class="skill-logo">
+            <img src="https://images.seeklogo.com/logo-png/27/2/mysql-logo-png_seeklogo-273735.png" alt="MySQL" class="skill-logo">
+            <img src="https://img.icons8.com/nolan/512/amazon-web-services.png" alt="AWS" class="skill-logo">
+        </div>
+    </section>
+
+    <section id="projects" class="text-center py-10">
+        <h2 class="text-2xl font-semibold">Projects</h2>
+        <div class="mt-6 flex justify-center space-x-6">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-80 hover-effect">
+                <h3 class="text-xl font-semibold">Pepper.ai</h3>
+                <p class="text-gray-400 mt-2">Predicting pepper age & yield using ML & DL.</p>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-80 hover-effect">
+                <h3 class="text-xl font-semibold">Student Project Management System</h3>
+                <p class="text-gray-400 mt-2">Managing student projects with MySQL & React.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="text-center py-10">
+        
+        <a href="resume.pdf" download class="mt-4 inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition duration-300">
+            Resume
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14m0 0l-4-4m4 4l4-4M5 19h14"/>
+            </svg>
+        </a>
+    </section>
+    
+
+    <section id="contact" class="text-center py-10">
+        <h2 class="text-2xl font-semibold">Contact</h2>
+        <p class="text-gray-400 mt-4">Email: akashkumar15351@gmail.com</p>
+        <p class="text-gray-400">LinkedIn: <a href="https://www.linkedin.com/in/akashkumar-ai" target="_blank" class="text-blue-400 hover:underline">linkedin.com/in/akash-kumar</a></p>
+    </section>
+
+    <footer class="text-center py-6 text-gray-500">
+        <p>&copy; 2025 Akash Kumar. Building AI-driven solutions with passion and precision.</p>
+    </footer>
+</body>
+</html>
